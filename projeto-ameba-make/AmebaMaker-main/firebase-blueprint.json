@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "ameba": {
+      "title": "Ameba",
+      "description": "A saved organic shape (ameba/blob) with its generation parameters.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "The name of the ameba" },
+        "path": { "type": "string", "description": "The SVG path data" },
+        "complexity": { "type": "number" },
+        "contrast": { "type": "number" },
+        "seed": { "type": "number" },
+        "color": { "type": "string" },
+        "blobText": { "type": "string" },
+        "blobTextColor": { "type": "string" },
+        "blobTextSize": { "type": "number" },
+        "blobTextX": { "type": "number" },
+        "blobTextY": { "type": "number" },
+        "blobTextFont": { "type": "string" },
+        "isActive": { "type": "boolean", "description": "Whether the ameba is active/visible in public lists (if applicable)" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "path", "complexity", "contrast", "seed", "color", "userId", "isActive"]
+    }
+  },
+  "firestore": {
+    "/amebas/{amebaId}": {
+      "schema": "ameba",
+      "description": "A collection of amebas saved by users."
+    },
+    "/admins/{userId}": {
+      "schema": { "type": "object", "properties": { "role": { "type": "string" } } },
+      "description": "Designates administrative users."
+    }
+  }
+}

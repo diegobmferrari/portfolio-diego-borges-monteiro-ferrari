@@ -1,0 +1,87 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 0. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // --- Helper Functions ---
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(data) {
+      return isSignedIn() && data.userId == request.auth.uid;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // --- Entity Validations ---
+    function isValidAmeba(data) {
+      return data.keys().hasAll(['name', 'path', 'complexity', 'contrast', 'seed', 'color', 'userId', 'isActive', 'createdAt', 'updatedAt'])
+        && data.keys().size() >= 10 && data.keys().size() <= 15
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 100
+        && data.path is string && data.path.size() <= 10000
+        && data.complexity is number && data.complexity >= 0 && data.complexity <= 50
+        && data.contrast is number && data.contrast >= 0 && data.contrast <= 1
+        && data.seed is number
+        && data.color is string && data.color.matches('^#[0-9a-fA-F]{6}$')
+        && (!data.keys().contains('blobText') || (data.blobText is string && data.blobText.size() <= 9))
+        && (!data.keys().contains('blobTextColor') || (data.blobTextColor is string && data.blobTextColor.matches('^#[0-9a-fA-F]{6}$')))
+        && (!data.keys().contains('blobTextSize') || (data.blobTextSize is number))
+        && (!data.keys().contains('blobTextX') || (data.blobTextX is number))
+        && (!data.keys().contains('blobTextY') || (data.blobTextY is number))
+        && (!data.keys().contains('blobTextFont') || (data.blobTextFont is string && data.blobTextFont.size() <= 64))
+        && data.userId == request.auth.uid
+        && data.isActive is bool
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    // --- Collection Rules ---
+
+    match /admins/{userId} {
+      allow read: if isSignedIn();
+      allow write: if false; 
+    }
+
+    match /amebas/{amebaId} {
+      allow get: if isOwner(existing()) || isAdmin();
+      allow list: if isSignedIn() && (resource.data.userId == request.auth.uid || isAdmin());
+      
+      allow create: if isSignedIn() 
+        && isValidId(amebaId)
+        && isValidAmeba(incoming())
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+
+      allow update: if isSignedIn()
+        && (isOwner(existing()) || isAdmin())
+        && isValidAmeba(incoming())
+        && incoming().userId == existing().userId
+        && incoming().createdAt == existing().createdAt
+        && incoming().updatedAt == request.time
+        && (
+          incoming().diff(existing()).affectedKeys().hasOnly(['name', 'isActive', 'updatedAt']) ||
+          incoming().diff(existing()).affectedKeys().hasOnly(['name', 'path', 'complexity', 'contrast', 'seed', 'color', 'blobText', 'blobTextColor', 'blobTextSize', 'blobTextX', 'blobTextY', 'blobTextFont', 'isActive', 'updatedAt'])
+        );
+
+      allow delete: if isSignedIn() && (isOwner(existing()) || isAdmin());
+    }
+  }
+}
