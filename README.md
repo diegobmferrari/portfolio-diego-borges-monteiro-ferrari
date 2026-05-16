@@ -50,7 +50,12 @@ Atualmente cursando o 1° período de Análise e Desenvolvimento de Sistema na U
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
 | **A Corrida do Prompt.pdf** | dominar a técnica de comunicação com modelos de linguagem (LLMs) para obter resultados de alta precisão | [Ver Projeto](./projeto-a-corrida-do-prompt/) |
- 
+
+#### 🤖 Inteligência Artificial
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
+| **Laboratório de Classificação Visual** |  Teachable Machine (Google)  | [Ver Projeto](./projeto-laboratorio-de-clasificacao-visual/) |
+  
 ---
  
 ### 🏗 Estrutura do Repositório
