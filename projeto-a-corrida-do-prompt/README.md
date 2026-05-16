@@ -5,8 +5,6 @@ Este projeto consiste em um laboratório prático e documental sobre **Engenhari
 
 Desenvolvido como um registro de experimentação técnica, o projeto demonstra o processo de refinamento de um conceito criativo surrealista: um músico astronauta executando um instrumento clássico em um cenário marciano, progredindo de um sujeito humano para variações com animais e cenários de fundo catastróficos altamente detalhados.
 
-![Figura 1: Evolução da geração de imagem a partir do refinamento de prompt estilo Barroco](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80)
-*Figura 1: Representação abstrata do processo iterativo de criação e refinamento visual por IA.*
 
 ---
 
