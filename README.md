@@ -55,7 +55,11 @@ Atualmente cursando o 1° período de Análise e Desenvolvimento de Sistema na U
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
 | **Laboratório de Classificação Visual** |  Teachable Machine (Google)  | [Ver Projeto](./projeto-laboratorio-de-clasificacao-visual/) |
-  
+
+#### 🤖 Inteligência Artificial
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
+| **Batalha de Modelos & Engenharia de Prompt (XML)** |   Avaliar a precisão técnica e a conformidade de diferentes LLMs   | [Ver Projeto](./projeto-batalha-de-modelos-e-engenharia-de-prompt/) |  
 ---
  
 ### 🏗 Estrutura do Repositório
