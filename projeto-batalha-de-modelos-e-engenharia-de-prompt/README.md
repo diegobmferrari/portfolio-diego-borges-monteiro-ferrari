@@ -5,9 +5,6 @@ Este projeto consiste em um estudo comparativo de **Engenharia de Prompt (Prompt
 
 Desenvolvido como parte do laboratório prático de **Engenharia de Prompt e Aplicações em IA**, o experimento consistiu em submeter as IAs a um desafio técnico: gerar o código para uma página web única (*Single Page Application*) em HTML5 e CSS3, com design responsivo, baseada no tema "Mestre do Miojo".
 
-![Figura 1: Representação de testes e análises comparativas entre múltiplos modelos de IA](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80)
-*Figura 1: Fluxo conceitual de avaliação cruzada e engenharia de prompts estruturados.*
-
 ---
 
 ## 👥 Integrantes do Grupo
@@ -69,10 +66,3 @@ Bugs Comuns: Falhas ou ausência total no carregamento de imagens integradas for
 
 Diagnóstico de Ferramenta Ideal:
 De acordo com as análises do laboratório, o modelo Claude consolidou-se como a escolha ideal para ambos os cenários avaliados: tanto para a realização de prototipagem rápida quanto para o desenvolvimento de códigos mais complexos.
-
-🔧 Como Visualizar este Estudo
-Navegue até a pasta /docs deste repositório.
-
-Abra o arquivo Experiência 3 - Batalha de Modelos & Engenharia de Prompt (XML).pdf para consultar as tabelas detalhadas com notas de criatividade, erros de sintaxe e comportamento individual de cada motor de IA analisado.
-
-Voltar ao início
