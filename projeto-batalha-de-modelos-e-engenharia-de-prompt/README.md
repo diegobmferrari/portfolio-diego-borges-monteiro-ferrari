@@ -17,26 +17,6 @@ Desenvolvido como parte do laboratório prático de **Engenharia de Prompt e Apl
 ## 🛠️ O Prompt Estruturado (XML)
 A técnica de delimitação por tags XML foi utilizada para separar claramente os objetivos, restrições e escopo do projeto, otimizando o processamento do contexto pelas IAs. O esqueleto do prompt aplicado seguiu a estrutura abaixo:
 
-```xml
-<tarefa>
-  <objetivo>Criar uma página HTML5 única com CSS3 interno (single page).</objetivo>
-  <tema>Mestre do Miojo</tema>
-  <diretrizes_design>
-    <layout>Responsivo e minimalista.</layout>
-    <paleta_cores>Verde, Vermelho e Laranja</paleta_cores>
-    <tipografia>Sans-serif para títulos, Serif para corpo.</tipografia>
-  </diretrizes_design>
-  <obrigatoriedades_tecnicas>
-    <item>Menu de navegação functional (âncoras).</item>
-    <item>Seção de portfólio ou galeria.</item>
-    <item>Rodapé com informações de contato simuladas.</item>
-    <item>Macarrão instantâneo</item>
-  </obrigatoriedades_tecnicas>
-  <metrica_obrigatoria>
-    Ao final da resposta, informe uma estimativa de quantos tokens foram gerados para este código.
-  </metrica_obrigatoria>
-</tarefa>
-
 🚀 Modelos Avaliados
 O protocolo de execução foi testado de forma cruzada nas seguintes ferramentas:
 
@@ -66,3 +46,6 @@ Bugs Comuns: Falhas ou ausência total no carregamento de imagens integradas for
 
 Diagnóstico de Ferramenta Ideal:
 De acordo com as análises do laboratório, o modelo Claude consolidou-se como a escolha ideal para ambos os cenários avaliados: tanto para a realização de prototipagem rápida quanto para o desenvolvimento de códigos mais complexos.
+ 
+---
+[Voltar ao início](https://github.com/diegobmferrari/diegobmferrari)
