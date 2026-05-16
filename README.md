@@ -60,6 +60,14 @@ Atualmente cursando o 1° período de Análise e Desenvolvimento de Sistema na U
 | Projeto | Descrição | Link |
 | :--- | :--- | :---: |
 | **Batalha de Modelos & Engenharia de Prompt (XML)** |   Avaliar a precisão técnica e a conformidade de diferentes LLMs   | [Ver Projeto](./projeto-batalha-de-modelos-e-engenharia-de-prompt/) |  
+
+#### 🤖 Inteligência Artificial
+| Projeto | Descrição | Link |
+| :--- | :--- | :---: |
+| ** Ameba Maker ** |
+criador de formas orgânicas, abstratas e fluidas (comumente chamadas de "blobs", que parecem "manchas" ou "gotas") no formato SVG.
+| [Ver Projeto](./projeto-ameba-make/) |  
+
 ---
  
 ### 🏗 Estrutura do Repositório
