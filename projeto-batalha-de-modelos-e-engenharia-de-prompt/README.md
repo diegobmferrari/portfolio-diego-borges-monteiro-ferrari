@@ -46,6 +46,10 @@ Bugs Comuns: Falhas ou ausência total no carregamento de imagens integradas for
 
 Diagnóstico de Ferramenta Ideal:
 De acordo com as análises do laboratório, o modelo Claude consolidou-se como a escolha ideal para ambos os cenários avaliados: tanto para a realização de prototipagem rápida quanto para o desenvolvimento de códigos mais complexos.
- 
+
+ 🔧 Como Visualizar este Estudo
+Navegue até a pasta /docs deste repositório.
+
+Abra o arquivo Experiência 3 - Batalha de Modelos & Engenharia de Prompt (XML).pdf para consultar as tabelas detalhadas com notas de criatividade, erros de sintaxe e comportamento individual de cada motor de IA analisado.
 ---
 [Voltar ao início](https://github.com/diegobmferrari/diegobmferrari)
