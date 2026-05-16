@@ -4,10 +4,6 @@
 Este projeto documenta um experimento prático focado na identificação de viés de amostragem em modelos de aprendizado de máquina e no desenvolvimento de estratégias de mitigação baseadas em abordagens **Human-in-the-loop (HITL)**. Utilizando a plataforma Teachable Machine, foi construído um classificador visual para analisar como conjuntos de dados restritos afetam a generalização do algoritmo.
 
 O laboratório explora o impacto ético e psicossocial gerado por sistemas enviesados, propondo um arcabouço estruturado de curadoria humana diversificada aplicável antes e depois do treinamento de modelos preditivos.
-
-![Figura 1: Interface do Teachable Machine demonstrando o treinamento com classes desbalanceadas](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80)
-*Figura 1: Exemplo ilustrativo de fluxo de treinamento de modelos de visão computacional.*
-
 ---
 
 ## 🔬 O Experimento: Teachable Machine
